@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModernMap">
+
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="-29.8393"
+        mapbox:mapbox_cameraTargetLng="30.9252"
+        mapbox:mapbox_cameraZoom="16">
+
+        <com.mapbox.mapboxsdk.maps.widgets.CompassView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="500dp"
+            android:layout_marginEnd="60dp"
+            android:paddingTop="50dp"></com.mapbox.mapboxsdk.maps.widgets.CompassView>
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="500dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/language_one_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/md_grey_200"
+            android:text="ARABIC"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/language_two_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/purple_500"
+            android:text="ENGLISH"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+        <Button
+            android:id="@+id/language_three_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/mapbox_navigation_route_alternative_congestion_red"
+            android:text="FRENCH"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+        <Button
+            android:id="@+id/language_four_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/mapbox_navigation_route_layer_congestion_yellow"
+            android:text="GERMAN"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/match_map_to_device_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="14dp"
+            android:backgroundTint="@color/mapbox_plugins_green"
+            android:contentDescription="reset"
+            app:srcCompat="@drawable/ic_arrow_head" />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:weightSum="8">
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:text="Filtering By Modern Landmarks"
+                android:textColor="@color/black"
+                android:background="@color/purple_200"/>
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                android:layout_weight="8"
+                android:background="@color/mapbox_plugins_material_grey_200"
+                android:enabled="false"
+                android:text="Start Navigation"
+                android:textColor="@color/white"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/location_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="14dp"
+                    android:layout_weight="2"
+                    android:tint="@color/white"
+                    android:backgroundTint="@color/purple_200"
+                    app:srcCompat="@android:drawable/ic_search_category_default"
+                    android:contentDescription="search" />
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/traffic_toggle_fab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="14dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/purple_200"
+                    android:src="@drawable/traffic"
+                    mapbox:fabSize="normal"
+                    android:contentDescription="traffic" />
+            </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/PopularFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="14dp"
+                android:layout_weight="2"
+                android:tint="@color/white"
+                android:backgroundTint="@color/teal_200"
+                android:onClick="Home"
+                app:srcCompat="@drawable/home_foreground"
+                android:contentDescription="Home" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/ModernFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="14dp"
+                android:layout_weight="2"
+                android:tint="@color/white"
+                android:backgroundTint="#90EE90"
+                android:onClick="Popular"
+                app:srcCompat="@drawable/popular_foreground"
+                android:contentDescription="Popular Landmarks" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/HistoricalFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="14dp"
+                android:layout_weight="2"
+                android:tint="@color/white"
+                android:onClick="Historical"
+                android:backgroundTint="@color/mapbox_blue"
+                app:srcCompat="@drawable/history_foreground"
+                android:contentDescription="Historical Landmarks" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/teal_200"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/black"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

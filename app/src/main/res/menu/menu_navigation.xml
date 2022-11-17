@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home_foreground"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        android:icon="@drawable/star_foreground"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/settings_foreground"/>
+
+
+    <item
+        android:id="@+id/transport"
+        android:title="Transport"
+        android:icon="@drawable/comapss_foreground"/>
+
+    <item
+        android:id="@+id/park"
+        android:title="Parking"
+        android:icon="@drawable/car_foreground"/>
+
+</menu>

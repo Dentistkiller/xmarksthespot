@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            //url 'https://mapbox.bintray.com/mapbox'
+
+            authentication{
+                basic(BasicAuthentication)
+            }
+            credentials{
+                //do not change the username below
+                //this should always be 'mapbox' (not your username)
+                username = 'mapbox'
+                //use the secret token you storeed in gradle.properties as the password
+                password = MAPBOX_DOWNLOADS_TOKEN
+                // password= project.properties['MAPBOX_DOWNLOADS_TOKEN'] ?:  ""
+            }
+        }
+    }
+}
+
+rootProject.name = "xmarksthespot"
+include ':app'

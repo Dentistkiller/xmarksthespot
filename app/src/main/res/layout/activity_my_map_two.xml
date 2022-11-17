@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyMapTwo">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="-29.824444"
+        mapbox:mapbox_cameraTargetLng="30.938611"
+        mapbox:mapbox_cameraZoom="16" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:weightSum="8">
+
+            <TextView
+                android:id="@+id/selected_location_info_textview"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                android:layout_weight="8.4"
+                android:text="Go to place picker"
+
+                />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/go_to_picker_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="14dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/mapbox_ic_check"
+                android:visibility="visible"
+                mapbox:fabSize="normal"
+                android:contentDescription="" />
+
+        </LinearLayout>
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+
+    <Button
+        android:id="@+id/driving_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/mapbox_blue"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        android:textStyle="normal"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toStartOf="@+id/walking_profile_button"
+        mapbox:layout_constraintHorizontal_bias="0.5"
+        mapbox:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/walking_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/mapbox_blue"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        android:textStyle="normal"
+        mapbox:layout_constraintBottom_toBottomOf="@+id/driving_profile_button"
+        mapbox:layout_constraintEnd_toStartOf="@+id/cycling_profile_button"
+        mapbox:layout_constraintHorizontal_bias="0.5"
+        mapbox:layout_constraintStart_toEndOf="@+id/driving_profile_button" />
+
+    <Button
+        android:id="@+id/cycling_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/mapbox_blue"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        android:textStyle="normal"
+        mapbox:layout_constraintBottom_toBottomOf="@+id/driving_profile_button"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.5"
+        mapbox:layout_constraintStart_toEndOf="@+id/walking_profile_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

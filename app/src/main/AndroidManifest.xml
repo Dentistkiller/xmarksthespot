@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yusuf.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launchers"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launchers_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Xmarksthespot">
+        <activity
+            android:name=".ParkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PopularMap"
+            android:exported="false" />
+        <activity
+            android:name=".ModernMap"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryMap"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".MyMapTwo"
+            android:exported="false" />
+        <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
+            android:name=".Info"
+            android:exported="false" />
+        <activity
+            android:name=".MyMap"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

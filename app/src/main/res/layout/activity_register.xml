@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Register">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="269dp"
+        tools:srcCompat="@drawable/logo"
+        android:src="@drawable/logo"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/edEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:hint="EMAIL"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/edPasswordreg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:hint="PASSWORD"
+        android:textAlignment="center" />
+
+
+
+    <EditText
+        android:id="@+id/edConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:hint="CONFIRM PASSWORD"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/buttonReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/black"
+        android:clickable="true"
+        android:onClick="registerOnClick"
+        android:text="REGISTER" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/black"
+        android:layout_marginStart="158dp"
+        android:onClick="CancelClick"
+        android:text="Clear" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/black"
+        android:layout_marginStart="158dp"
+        android:onClick="Back2Login"
+        android:text="Login" />
+
+</LinearLayout>
